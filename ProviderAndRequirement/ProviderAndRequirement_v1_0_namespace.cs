@@ -57,13 +57,13 @@ namespace ProviderAndRequirement_v1_0 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ContractType {
         
-        private OperationSignatureType[] behaviorsField;
+        private LogicalOperationSignatureType[] behaviorsField;
         
         private DomainModelType domainModelField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("OperationSignature", IsNullable=false)]
-        public OperationSignatureType[] Behaviors {
+        public LogicalOperationSignatureType[] Behaviors {
             get {
                 return this.behaviorsField;
             }
@@ -89,11 +89,11 @@ namespace ProviderAndRequirement_v1_0 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
-    public partial class OperationSignatureType {
+    public partial class LogicalOperationSignatureType {
         
-        private VariableType[] parameterField;
+        private LogicalInformationType[] parameterField;
         
-        private VariableType returnValueField;
+        private LogicalInformationType returnValueField;
         
         private string nameField;
         
@@ -101,7 +101,7 @@ namespace ProviderAndRequirement_v1_0 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Parameter")]
-        public VariableType[] Parameter {
+        public LogicalInformationType[] Parameter {
             get {
                 return this.parameterField;
             }
@@ -111,7 +111,7 @@ namespace ProviderAndRequirement_v1_0 {
         }
         
         /// <remarks/>
-        public VariableType ReturnValue {
+        public LogicalInformationType ReturnValue {
             get {
                 return this.returnValueField;
             }
@@ -149,7 +149,7 @@ namespace ProviderAndRequirement_v1_0 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
-    public partial class VariableType {
+    public partial class LogicalInformationType {
         
         private string nameField;
         
@@ -199,7 +199,7 @@ namespace ProviderAndRequirement_v1_0 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ValidationOperationSignatureType {
         
-        private VariableType[] parameterField;
+        private LogicalInformationType[] parameterField;
         
         private string nameField;
         
@@ -207,7 +207,7 @@ namespace ProviderAndRequirement_v1_0 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Parameter")]
-        public VariableType[] Parameter {
+        public LogicalInformationType[] Parameter {
             get {
                 return this.parameterField;
             }
@@ -247,14 +247,15 @@ namespace ProviderAndRequirement_v1_0 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ClassModelType {
         
-        private VariableType propertyField;
+        private LogicalInformationType[] propertyField;
         
         private string nameField;
         
         private string logicalNamespaceField;
         
         /// <remarks/>
-        public VariableType Property {
+        [System.Xml.Serialization.XmlElementAttribute("Property")]
+        public LogicalInformationType[] Property {
             get {
                 return this.propertyField;
             }

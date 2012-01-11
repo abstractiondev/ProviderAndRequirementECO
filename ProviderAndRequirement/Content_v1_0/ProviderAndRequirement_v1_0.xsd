@@ -2,29 +2,29 @@
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (http://www.altova.com) by Kalle Launiala (Citrus Solutions Oy) -->
 <xs:schema xmlns="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" xmlns:mstns="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" elementFormDefault="qualified" id="ProviderAndRequirement">
 	<xs:element name="ProviderAndRequirementMeta" type="ProviderAndRequirementMetaType"/>
-	<xs:complexType name="VariableType">
+	<xs:complexType name="LogicalInformationType">
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
 		<xs:attribute name="logicalDatatype" type="xs:string" use="required"/>
 	</xs:complexType>
-	<xs:complexType name="OperationSignatureType">
+	<xs:complexType name="LogicalOperationSignatureType">
 		<xs:sequence>
-			<xs:element name="Parameter" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="ReturnValue" type="VariableType" minOccurs="0"/>
+			<xs:element name="Parameter" type="LogicalInformationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ReturnValue" type="LogicalInformationType" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="ValidationOperationSignatureType">
 		<xs:sequence>
-			<xs:element name="Parameter" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Parameter" type="LogicalInformationType" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="BehaviorsType">
 		<xs:sequence>
-			<xs:element name="OperationSignature" type="OperationSignatureType" maxOccurs="unbounded"/>
+			<xs:element name="OperationSignature" type="LogicalOperationSignatureType" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="DomainModelType">
@@ -47,7 +47,7 @@
 	</xs:complexType>
 	<xs:complexType name="ClassModelType">
 		<xs:sequence>
-			<xs:element name="Property" type="VariableType"/>
+			<xs:element name="Property" type="LogicalInformationType" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
