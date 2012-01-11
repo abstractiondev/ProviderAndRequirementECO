@@ -20,9 +20,9 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd", IsNullable=false)]
-    public partial class ProviderAndRequirementMeta {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
+    [System.Xml.Serialization.XmlRootAttribute("ProviderAndRequirementMeta", Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd", IsNullable=false)]
+    public partial class ProviderAndRequirementMetaType {
         
         private ContractType providesField;
         
