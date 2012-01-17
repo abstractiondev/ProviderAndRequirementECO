@@ -99,6 +99,8 @@ namespace ProviderAndRequirement_v1_0 {
         
         private string logicalNamespaceField;
         
+        private byte[] sha1HashField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Parameter")]
         public LogicalInformationType[] Parameter {
@@ -141,6 +143,17 @@ namespace ProviderAndRequirement_v1_0 {
                 this.logicalNamespaceField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="hexBinary")]
+        public byte[] sha1Hash {
+            get {
+                return this.sha1HashField;
+            }
+            set {
+                this.sha1HashField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -156,6 +169,8 @@ namespace ProviderAndRequirement_v1_0 {
         private string logicalNamespaceField;
         
         private string logicalDatatypeField;
+        
+        private byte[] sha1HashField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -189,6 +204,17 @@ namespace ProviderAndRequirement_v1_0 {
                 this.logicalDatatypeField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="hexBinary")]
+        public byte[] sha1Hash {
+            get {
+                return this.sha1HashField;
+            }
+            set {
+                this.sha1HashField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -204,6 +230,8 @@ namespace ProviderAndRequirement_v1_0 {
         private string nameField;
         
         private string logicalNamespaceField;
+        
+        private byte[] sha1HashField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Parameter")]
@@ -237,6 +265,17 @@ namespace ProviderAndRequirement_v1_0 {
                 this.logicalNamespaceField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="hexBinary")]
+        public byte[] sha1Hash {
+            get {
+                return this.sha1HashField;
+            }
+            set {
+                this.sha1HashField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -252,6 +291,8 @@ namespace ProviderAndRequirement_v1_0 {
         private string nameField;
         
         private string logicalNamespaceField;
+        
+        private byte[] sha1HashField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Property")]
@@ -283,6 +324,17 @@ namespace ProviderAndRequirement_v1_0 {
             }
             set {
                 this.logicalNamespaceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="hexBinary")]
+        public byte[] sha1Hash {
+            get {
+                return this.sha1HashField;
+            }
+            set {
+                this.sha1HashField = value;
             }
         }
     }

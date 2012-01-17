@@ -6,6 +6,18 @@
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
 		<xs:attribute name="logicalDatatype" type="xs:string" use="required"/>
+		<xs:attribute name="sha1Hash" use="required">
+			<xs:annotation>
+				<xs:documentation>Sha1 hash over the signature as following formula with ASCII encoded byte array (zero-bytes added after encoding):
+
+logicalDataType\0logicalNamespace\0name</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:hexBinary">
+					<xs:length value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="LogicalOperationSignatureType">
 		<xs:sequence>
@@ -14,6 +26,26 @@
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
+		<xs:attribute name="sha1Hash" use="required">
+			<xs:annotation>
+				<xs:documentation>Sha1 hash over the signature as following formula with ASCII encoded byte array (zero-bytes added after encoding):
+
+logicalNamespace\0name\0
+
+(then for each parameter )
+
+logicalDataType\0logicalNamespace\0name\0
+
+(then for return value)
+
+logicalDataType\0logicalNamespace\0name\0</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:hexBinary">
+					<xs:length value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ValidationOperationSignatureType">
 		<xs:sequence>
@@ -21,6 +53,22 @@
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
+		<xs:attribute name="sha1Hash" use="required">
+			<xs:annotation>
+				<xs:documentation>Sha1 hash over the signature as following formula with ASCII encoded byte array (zero-bytes added after encoding):
+
+logicalNamespace\0name\0
+
+(then for each parameter )
+
+logicalDataType\0logicalNamespace\0name\0</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:hexBinary">
+					<xs:length value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="BehaviorsType">
 		<xs:sequence>
@@ -51,6 +99,22 @@
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
+		<xs:attribute name="sha1Hash" use="required">
+			<xs:annotation>
+				<xs:documentation>Sha1 hash over the signature as following formula with ASCII encoded byte array (zero-bytes added after encoding):
+
+logicalNamespace\0name\0
+
+(then for each property)
+
+logicalDataType\0logicalNamespace\0name\0</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:hexBinary">
+					<xs:length value="40"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="ContractType">
 		<xs:sequence>
