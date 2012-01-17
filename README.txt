@@ -1,5 +1,5 @@
-Provider And Requirement Metadata
----------------------------------
+Provider And Requirement Metadata for Ecosystem
+-----------------------------------------------
 - Abstraction creation phase metadata model
 - Provides model for connecting independent modules
 - Provides basis for define required mapping to match modules
