@@ -14,7 +14,7 @@ logicalDataType\0logicalNamespace\0name</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="40"/>
+					<xs:length value="20" />
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -42,7 +42,7 @@ logicalDataType\0logicalNamespace\0name\0</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="40"/>
+					<xs:length value="20" />
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -65,7 +65,7 @@ logicalDataType\0logicalNamespace\0name\0</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="40"/>
+					<xs:length value="20"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -111,7 +111,7 @@ logicalDataType\0logicalNamespace\0name\0</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="40"/>
+					<xs:length value="20"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
