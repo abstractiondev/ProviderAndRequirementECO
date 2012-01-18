@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSpy v2011 rel. 2 sp1 (http://www.altova.com) by Kalle Launiala (Citrus Solutions Oy) -->
 <xs:schema xmlns="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" xmlns:mstns="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd" elementFormDefault="qualified" id="ProviderAndRequirement">
-	<xs:element name="ProviderAndRequirementMeta" type="ProviderAndRequirementMetaType"/>
+	<xs:element name="ProviderAndRequirementECO" type="ProviderAndRequirementECOType"/>
 	<xs:complexType name="LogicalInformationType">
 		<xs:attribute name="name" type="xs:string" use="required"/>
 		<xs:attribute name="logicalNamespace" type="xs:string" use="required"/>
@@ -14,7 +14,7 @@ logicalDataType\0logicalNamespace\0name</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="20" />
+					<xs:length value="20"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -42,7 +42,7 @@ logicalDataType\0logicalNamespace\0name\0</xs:documentation>
 			</xs:annotation>
 			<xs:simpleType>
 				<xs:restriction base="xs:hexBinary">
-					<xs:length value="20" />
+					<xs:length value="20"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -122,7 +122,7 @@ logicalDataType\0logicalNamespace\0name\0</xs:documentation>
 			<xs:element name="DomainModel" type="DomainModelType" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="ProviderAndRequirementMetaType">
+	<xs:complexType name="ProviderAndRequirementECOType">
 		<xs:sequence>
 			<xs:element name="Provides" type="ContractType"/>
 			<xs:element name="Requires" type="ContractType"/>
