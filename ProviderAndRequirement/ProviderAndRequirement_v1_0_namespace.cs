@@ -20,13 +20,14 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
-    [System.Xml.Serialization.XmlRootAttribute("ProviderAndRequirementECO", Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd", IsNullable=false)]
+    [System.Xml.Serialization.XmlRootAttribute("ProviderAndRequirementECO", Namespace="", IsNullable=false)]
     public partial class ProviderAndRequirementECOType {
         
         private ContractType providesField;
         
         private ContractType requiresField;
+        
+        private byte[] gitIdField;
         
         /// <remarks/>
         public ContractType Provides {
@@ -47,6 +48,17 @@ namespace ProviderAndRequirement_v1_0 {
                 this.requiresField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="hexBinary")]
+        public byte[] gitId {
+            get {
+                return this.gitIdField;
+            }
+            set {
+                this.gitIdField = value;
+            }
+        }
     }
     
     /// <remarks/>
@@ -54,7 +66,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ContractType {
         
         private LogicalOperationSignatureType[] behaviorsField;
@@ -88,7 +99,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class LogicalOperationSignatureType {
         
         private LogicalInformationType[] parameterField;
@@ -161,7 +171,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class LogicalInformationType {
         
         private string nameField;
@@ -222,7 +231,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ValidationOperationSignatureType {
         
         private LogicalInformationType[] parameterField;
@@ -283,7 +291,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class ClassModelType {
         
         private LogicalInformationType[] propertyField;
@@ -344,7 +351,6 @@ namespace ProviderAndRequirement_v1_0 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/ProviderAndRequirement_v1_0.xsd")]
     public partial class DomainModelType {
         
         private ClassModelType[] classesField;
